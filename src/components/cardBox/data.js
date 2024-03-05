@@ -1,0 +1,38 @@
+export const cards = [
+  {
+    type: "bitcoin",
+    logo: "./images/Bitcoin.svg",
+    color: "black",
+    holder: "HAZ WAC",
+    number: "1234 5678 8765 1021",
+    expirationDate: "12/25",
+    sim: "./images/sim.svg",
+  },
+  {
+    type: "ninja",
+    logo: "./images/Group.svg",
+    color: "white",
+    holder: "HAZ WAC",
+    number: "1234 5678 0223 1022",
+    expirationDate: "11/24",
+    sim: "./images/sim.svg",
+  },
+  {
+    type: "chain",
+    logo: "./images/chain.svg",
+    color: "black",
+    holder: "HAZ WAC",
+    number: "1234 5678 5634 1025",
+    expirationDate: "10/23",
+    sim: "./images/sim.svg",
+  },
+  {
+    type: "evil",
+    logo: "./images/Subtract.svg",
+    color: "white",
+    holder: "HAZ WAC",
+    number: "1234 5678 1099 1020",
+    expirationDate: "09/22",
+    sim: "./images/sim.svg",
+  },
+];
