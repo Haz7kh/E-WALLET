@@ -41,15 +41,24 @@ export default function AddCard() {
   };
 
   const addCardHandler = () => {
+    // Check if the selected type already exists in cards array
+    const isTypeExist = cards.some((card) => card.type === type);
+
+    if (isTypeExist) {
+      alert("Type already exists. Please try again with a different type.");
+      return; // Exit the function if type already exists
+    }
+
     const newCard = {
       type: type,
       logo: cardLogo[type],
-      number: cardNumber,
       color: "black",
       holder: name,
+      number: cardNumber,
       expirationDate: thru,
       sim: "./images/sim.svg",
     };
+
     // Added the new card to the cards array
     cards.push(newCard);
     console.log("New card added:", newCard);
