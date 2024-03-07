@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./new-card.css";
 import CardBox from "../cardBox/CardBox";
 import { Link } from "react-router-dom";
+import { cards } from "../cardBox/data";
 
 export default function NewCard() {
   const types = ["bitcoin", "ninja", "chain", "evil"];
@@ -18,12 +19,12 @@ export default function NewCard() {
         <h2>E-Wallet</h2>
         <div className="content">
           <p>ACTIVE CARD</p>
-          {types.map((type, index) => (
+          {cards.map((card, index) => (
             <CardBox
               key={index}
-              type={type}
-              isActive={activeCard === type}
-              onClick={() => handleCardClick(type)}
+              type={card.type}
+              isActive={activeCard === card.type}
+              onClick={() => handleCardClick(card.type)}
               index={index}
             />
           ))}
