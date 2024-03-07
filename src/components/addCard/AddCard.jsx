@@ -41,6 +41,12 @@ export default function AddCard() {
   };
 
   const addCardHandler = () => {
+    // Check if any of the fields are empty
+    if (!type || !cardNumber || !name || !thru) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
     // Check if the selected type already exists in cards array
     const isTypeExist = cards.some((card) => card.type === type);
 
