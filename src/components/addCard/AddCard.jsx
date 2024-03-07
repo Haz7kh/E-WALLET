@@ -47,7 +47,7 @@ export default function AddCard() {
       return;
     }
 
-    // Check if the selected type already exists in cards array
+    // Check if the selected type already exists
     const isTypeExist = cards.some((card) => card.type === type);
 
     if (isTypeExist) {
