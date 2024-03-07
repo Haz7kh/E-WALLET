@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { cards } from "../cardBox/data";
 
 export default function NewCard() {
-  const types = ["bitcoin", "ninja", "chain", "evil"];
-
   const [activeCard, setActiveCard] = useState("bitcoin");
 
   const handleCardClick = (type) => {

@@ -6,13 +6,14 @@ import { cards } from "../cardBox/data"; // Import the cards array
 export default function AddCard() {
   const cardLogo = {
     bitcoin: "./images/Bitcoin.svg",
-    ninja: "./images/Group.svg",
-    chain: "./images/chain.svg",
-    evil: "./images/Subtract.svg",
+    swe: "./images/Bitcoin.svg",
+    nor: "./images/Group.svg",
+    bbd: "./images/chain.svg",
+
     sim: "./images/sim.svg",
   };
 
-  const [type, setType] = useState("bitcoin");
+  const [type, setType] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [name, setName] = useState("");
   const [thru, setThru] = useState("");
@@ -43,6 +44,7 @@ export default function AddCard() {
     const newCard = {
       type: type,
       logo: cardLogo[type],
+      number: cardNumber,
       color: "black",
       holder: name,
       expirationDate: thru,
@@ -122,10 +124,9 @@ export default function AddCard() {
             </div>
             <div>
               <select value={type} onChange={cardTypeHandler}>
-                <option value="bitcoin">BITCOIN</option>
-                <option value="ninja">NINJA</option>
-                <option value="chain">CHAIN</option>
-                <option value="evil">EVIL</option>
+                <option value="swe">SWE</option>
+                <option value="nor">NOR</option>
+                <option value="bbd">BBD</option>
               </select>
             </div>
           </form>
