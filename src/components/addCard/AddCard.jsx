@@ -13,7 +13,7 @@ export default function AddCard() {
     sim: "./images/sim.svg",
   };
 
-  const [type, setType] = useState("");
+  const [type, setType] = useState("swe");
   const [cardNumber, setCardNumber] = useState("");
   const [name, setName] = useState("");
   const [thru, setThru] = useState("");
@@ -46,7 +46,7 @@ export default function AddCard() {
 
     if (isTypeExist) {
       alert("Type already exists. Please try again with a different type.");
-      return; // Exit the function if type already exists
+      return; // Exit the function if card type already exists
     }
 
     const newCard = {
